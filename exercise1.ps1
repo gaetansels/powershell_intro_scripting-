@@ -40,4 +40,43 @@ $jedi[0]
 #this is how you add a 5th Jedi to the list, or number 4 if we count in programming/scripting 
 $jedi += "bart simpson"
 
-#Hashtables
+# Hashtables
+$fellowship = @{key1 = "item1"; key2 = "item2"} 
+
+$fellowship = @{"wizard" = "gandalf"; "hobbit" = "frodo" ; "Elf" = "Legolas"} 
+
+# adding something to the Hashtables
+$fellowship.add("dwarf", "gimli")
+
+# Now let's edit the key value pair we have added to the Hashtables
+$fellowship.set_item("dwarf", "bilbo")
+
+#getting specific data 
+$fellowship."dwarf"
+
+# or 
+$fellowship["dwarf"]
+
+#removing 
+$fellowship.remove("dwarf")
+
+#Collecting user input with Read-Host
+#user input
+$favsystem = read-host -Prompt "what is your favorite nintendo gaming system?"
+
+
+#options, we can't do anything with it yet 
+Write-Host "1. NES"
+Write-Host "2. SNES"
+Write-Host "3. N64"
+Write-Host "4. gamecube"
+Write-Host "5. wii"
+$favsystem = read-host -Prompt "what is your favorite nintendo gaming system?"
+
+#  If... then... else conditionals
+$pokemoncaught = "908"
+if ($pokemoncaught -eq 908) 
+    { Write-Host "you're a pokemon master!" } 
+        Else {Write-Host "go catch more pokemon!"}  
+
+
