@@ -18,3 +18,14 @@ Get-Command -CommandType Cmdlet #gives you all the comandlet's avaikabk
 
 #piping the result of command 1 into command 2, this is combining commands done with "|"
 command-1 | command-2
+
+# example : 
+"May the 4th be with you" | out-file forcewithwho.txt
+ls 
+
+# variable is an object that you can create, for example: $something = variable 
+$favcharacter = "spongebob"
+$favcharacter.gettype() #it should say string
+# now piping 
+$favcharacter | Select-Object -property * 
+# * is a wildcard, so for everything, but because it is a string, it only has the length property 
