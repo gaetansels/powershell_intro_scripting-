@@ -78,5 +78,11 @@ $pokemoncaught = "908"
 if ($pokemoncaught -eq 908) 
     { Write-Host "you're a pokemon master!" } 
         Else {Write-Host "go catch more pokemon!"}  
+        
+        
+# For Loops
 
-
+$halopeeps = @('master chief', 'cortana', 'captain keys', 'flood')
+for($counter =0; $counter -le 3;$counter++) {
+    Write-Host "Holy smokes, it's" $halopeeps[$counter] 
+    }
