@@ -39,3 +39,5 @@ $jedi[0]
 # As I learned with Python, counting starts with 0, so for this list [0,1,2,3]
 #this is how you add a 5th Jedi to the list, or number 4 if we count in programming/scripting 
 $jedi += "bart simpson"
+
+#Hashtables
