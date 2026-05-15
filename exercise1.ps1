@@ -34,3 +34,8 @@ $favcharacter | Select-Object -property *
 $jedi = @('obi-wan','luke skywalker','yoda','mace windu')
 # if we do gettype 
 $jedi.gettype() # we will see an object[] but the base type is system.array 
+#if you want to find the very first Jedi on the list : 
+$jedi[0] 
+# As I learned with Python, counting starts with 0, so for this list [0,1,2,3]
+#this is how you add a 5th Jedi to the list, or number 4 if we count in programming/scripting 
+$jedi += "bart simpson"
