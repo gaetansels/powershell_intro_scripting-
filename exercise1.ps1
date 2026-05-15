@@ -7,4 +7,14 @@ $psversiontable.PSVersion
 Set-ExecutionPolicy RemoteSigned 
 
 #just like with Python, you can print hello world
-Write-Host "hello world!"
+#cmdlet
+Write-Host "hello world!" -NoNewline #this makes sure it is on the same line 
+Write-Host "Hello again!"
+
+#note in the blue space where you see the outcomes, you can execute "clear" to remove what you did before
+
+# How do you find cmdlets?
+Get-Command -CommandType Cmdlet #gives you all the comandlet's avaikabk
+
+#piping the result of command 1 into command 2, this is combining commands done with "|"
+command-1 | command-2
