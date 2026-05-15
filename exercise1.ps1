@@ -29,3 +29,8 @@ $favcharacter.gettype() #it should say string
 # now piping 
 $favcharacter | Select-Object -property * 
 # * is a wildcard, so for everything, but because it is a string, it only has the length property 
+
+#array is a collection of variables
+$jedi = @('obi-wan','luke skywalker','yoda','mace windu')
+# if we do gettype 
+$jedi.gettype() # we will see an object[] but the base type is system.array 
