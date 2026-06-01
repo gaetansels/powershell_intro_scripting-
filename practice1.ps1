@@ -1,3 +1,5 @@
+# 2.5.3 Maak gebruik van de New-Item cmdlet 
+
 # Maak op een schijf naar keuze een directory ‘ps-test’ 
 Get-Help New-Item -Examples
 # voorbeeld 
@@ -46,6 +48,33 @@ New-Item -ItemType "File" -Path (get-content "C:\scripts\text-file-list\read.txt
 # help with paramaters
 Get-Help New-Item -Parameter ItemType
 
-# overwriting files
+# overwriting files , help 
 
-New-Item -ItemType "File" -Path (get-content "C:\scripts\text-file-list\read.txt") 
+Get-Help New-Item -Parameter *
+
+<#
+-Force [<System.Management.Automation.SwitchParameter>]
+    Forces this cmdlet to create an item that writes over an existing read-only item.
+#>
+
+# force parameter with the get-help : 
+# which cmdlet support the parameter force :
+Get-Command -ParameterName force
+# look at how the force parameter works with the cmdlet we are using (new-item) : 
+Get-Help New-Item -Parameter force
+# get help 
+Get-Help New-Item -Examples # example 9 : 
+New-Item ./TestFile.txt -ItemType File -Value 'This is just a test file'
+
+  New-Item ./TestFile.txt -ItemType File -Force
+
+# 5. Voer het vorige cmdlet opnieuw uit maar overschrijf deze 150 files en geef ze een kleine inhoud (waarde).
+cd C:\scripts\readingmap
+New-Item -Path (get-content "C:\scripts\text-file-list\ORead.txt") -value "test" -force
+
+# not working , below I will try to understand why : 
+(Get-Content "C:\scripts\text-file-list\ORead.txt") | ForEach-Object { "[$_]" }
+
+(Get-Content "C:\scripts\text-file-list\ORead.txt") | ForEach-Object { $_.Length }
+
+
