@@ -70,7 +70,7 @@ New-Item ./TestFile.txt -ItemType File -Value 'This is just a test file'
 
 # 5. Voer het vorige cmdlet opnieuw uit maar overschrijf deze 150 files en geef ze een kleine inhoud (waarde).
 cd C:\scripts\readingmap
-New-Item -Path (get-content "C:\scripts\text-file-list\ORead.txt") -value "test" -force
+New-Item -Path (get-content "C:\scripts\text-file-list\ORead.txt") -value "test" -force # value also filles the new files with the word "test" so that it is not empty 
 
 # not working , below I will try to understand why : 
 (Get-Content "C:\scripts\text-file-list\ORead.txt") | ForEach-Object { "[$_]" }
