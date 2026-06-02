@@ -49,3 +49,31 @@ for($i = 0 ; $i -lt 4; $i++)
 
 het commando dat je wilt herhalen moet binnen de accolades { } staan.
   #>
+
+
+# 3. Vraag alle Notepad processen op. 
+
+# help
+Get-Help Get-Process -Examples
+# Example 2: Display detailed information about one or more processes
+Get-Process winword, explorer | Format-List *
+#  Example 7: Get modules loaded with the specified process ---------
+    
+    ```powershell
+    Get-Process -Name SQL* -Module
+    ```
+    
+    This command uses the **Module** parameter to get the modules loaded by all processes with a name
+    beginning with `SQL`.
+
+# alle Notepad processen
+Get-Process *Notepad*  
+
+# 4. Stop nu alle Notepad processen via 1 cmdlet. 
+get-help Stop-Process -Examples
+Stop-Process -Name "notepad"
+
+
+--------------------------------------------------------
+
+# 2.5.5 Lokale gebruikers 
