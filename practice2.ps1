@@ -34,4 +34,11 @@ Tip: Je mag dit testen in je ISE script door lijnen 18-21 toe te voegen onder je
 # 1. Voeg aan je bestaande $mijnauto object een nieuwe eigenschap Prijs toe met waarde 75000.
 
 # get help
-get-help Add-Member -Examples
+get-help Add-Member -Examples # --> REMARKS Get-Help cannot find the Help files for this cmdlet on this computer
+# get help 
+get-help Add-Member
+# SYNTAX
+# example 3 : 
+Add-Member [-NotePropertyName] <string> [-NotePropertyValue] <Object> -InputObject <psobject> [-TypeName <string>] [-Force] [-PassThru]  [<CommonParameters>]
+# test 
+Add-Member -InputObject $mijnauto -NotePropertyName "Prijs" -NotePropertyValue 75000
